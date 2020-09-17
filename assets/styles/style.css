@@ -16,27 +16,27 @@ Quicksands
 /* font face */
 @font-face {
   font-family: "Font Awesome 5 Free";
-  src: url('webfonts/fa-solid-900.woff') format('woff');
+  src: url('../webfonts/fa-solid-900.woff') format('woff');
 }
 
 @font-face {
   font-family: "Font Awesome 5 Brands";
-  src: url('webfonts/fa-brands-400.woff') format('woff');
+  src: url('../webfonts/fa-brands-400.woff') format('woff');
 }
 
 @font-face {
   font-family: "Quicksand";
-  src: url('webfonts/Quicksand-Regular.ttf') format('truetype');
+  src: url('../webfonts/Quicksand-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url('webfonts/OpenSans-Regular.ttf') format('truetype');
+  src: url('../webfonts/OpenSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: "Asap";
-  src: url('webfonts/Asap-Regular.ttf') format('truetype');
+  src: url('../webfonts/Asap-Regular.ttf') format('truetype');
 }
 
 /* style icon navbar*/
