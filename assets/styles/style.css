@@ -1,0 +1,746 @@
+/* color
+#faeda9 rgb(250, 237, 169)
+#edce7c rgb(237, 206, 124)
+#fcd839 rgb(252, 216, 57)
+#ffd300 rgb(255, 211, 0)
+#f7b115 rgb(247, 177, 21)
+#f8a302 rgb(248, 163, 2)
+#fcf9e8 rgb(252, 249, 232)
+#a6754c rgb(153, 102, 51)*/
+/* font
+Font Awesome 5 Free
+Asap
+Open Sans
+Quicksands
+ */
+/* font face */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  src: url('webfonts/fa-solid-900.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  src: url('webfonts/fa-brands-400.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url('webfonts/Quicksand-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url('webfonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Asap";
+  src: url('webfonts/Asap-Regular.ttf') format('truetype');
+}
+
+/* style icon navbar*/
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  line-height: 25px;
+}
+
+.login::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 800;
+  font-size: 20px;
+  content: "\f2f6";
+}
+
+.login:hover {
+  color: #fcf9e8;
+  text-shadow: 1px 1px 1px #a6754c;
+}
+
+.troly::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+  content: "\f07a";
+}
+
+.troly:hover {
+  color: #fcf9e8;
+  text-shadow: 1px 1px 1px #a6754c;
+}
+
+.search::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+  content: "\f002";
+}
+
+.search:hover {
+  color: #fcf9e8;
+  text-shadow: 1px 1px 1px #a6754c;
+}
+
+/* style umum */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  font-family: sans-serif;
+}
+
+/*Navbar*/
+nav {
+  display: flex;
+  background-color: #faeda9;
+  justify-content: space-around;
+  height: 75px;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0px 0px 3px black;
+}
+
+nav div.logo {
+  display: flex;
+  color: #a6754c;
+  font-family: asap;
+}
+
+nav div.logo h1 {
+  margin: auto;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px #a6754c;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 40%;
+}
+
+nav ul li a {
+  color: #a6754c;
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  transition: 1s;
+}
+
+nav ul li.link a:hover {
+  color: #fcf9e8;
+  text-shadow: 1px 1px 1px #a6754c;
+}
+
+nav ul li.link a:hover::after {
+  content: '';
+  display: block;
+  border-bottom: 3px solid #a6754c;
+  width: 50%;
+  margin: auto;
+  margin-top: -3px;
+}
+
+/*Hamburger Menu*/
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #a6754c;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -4px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/*Hamburger Menu Animation*/
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+  background-color: #fcf9e8;
+  transform: rotate(45deg) translate(-1px, 1px);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+  background-color: #fcf9e8;
+  transform: rotate(-45deg) translate(-2px, -0px);
+}
+
+/* style jumbotron */
+div.jumbotron {
+  margin: auto;
+}
+
+div.jumbotron img {
+  width: 100%;
+}
+
+/* style main */
+main {
+  width: 80%;
+  margin: auto;
+  font-family: 'Quicksand';
+}
+
+div.content {
+  margin: auto;
+}
+
+#beranda,
+#produk,
+#fitur,
+#kontak {
+  box-shadow: 0px 0px 10px -5px #a6754c;
+  border-radius: 2px;
+  padding: 75px 20px;
+  z-index: -2;
+}
+
+.subcontent {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* style beranda */
+#beranda {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+}
+
+.ilustrasi {
+  width: 50%;
+}
+
+.ilustrasi img {
+  width: 100%;
+}
+
+.isi {
+  width: 40%;
+  margin: auto 20px;
+  height: 100%;
+}
+
+.isi section {
+  margin: 20px 0;
+}
+
+.isi button {
+  width: 75%;
+  display: flex;
+  padding: 10px;
+  font-size: 150%;
+  border: none;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 50px;
+  color: #a6754c;
+  background-color: #faeda9;
+  box-shadow: 0px 0px 4px #a6754c;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.isi button:hover {
+  background-color: #fcf9e8;
+  box-shadow: none;
+  border: 0.1px solid rgb(153, 102, 51, 0.3);
+  transition: all 1s;
+}
+
+.play::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 800;
+  font-size: 50px;
+  content: "\f3ab";
+}
+
+.isi button span {
+  font-weight: 700;
+}
+
+.isi img {
+  width: 30%;
+}
+
+/* style Produk */
+article#produk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#produk section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#produk section ul {
+  width: 30%;
+  margin: auto 20px;
+  padding: 10px 50px;
+  text-align: center;
+  font-weight: 600;
+}
+
+#produk section ul li {
+  list-style: none;
+}
+
+#produk section ul li a {
+  list-style: none;
+  text-decoration: none;
+  display: block;
+  line-height: 30px;
+  border-radius: 30px;
+  background-color: #faeda9;
+  margin: 10px auto;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #a6754c;
+  border: 0.5px solid #edce7c;
+}
+
+#produk section ul li a:hover {
+  box-shadow: none;
+  transition: all 1s;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 5px #a6754c;
+}
+
+#produk .hlink {
+  color: black;
+  text-shadow: 0px 0px 1px #a6754c;
+}
+
+#produk .hlink:hover {
+  transform: scale(0.9);
+  text-decoration: underline;
+  color: #a6754c;
+  transition: all 1s;
+}
+
+/* style fitur */
+#fitur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#fitur section {
+  display: flex;
+}
+
+#fitur h2 {
+  width: 20%;
+}
+
+#fitur table {
+  text-align: center;
+  margin: 15px;
+  padding: 10px;
+}
+
+/* style kontak */
+#kontak h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+#kontak {
+  height: 450px;
+}
+
+#kontak section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#kontak section table {
+  width: 40%;
+  height: 200px;
+}
+
+#kontak section form {
+  width: 40%;
+}
+
+#kontak section form table {
+  width: 100%;
+}
+
+#kontak form .ketik {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #a6754c;
+  box-shadow: 0px 0px 2px #a6754c;
+  border-radius: 5px;
+  margin: 10px 5px;
+}
+
+#kontak form .kpesan {
+  resize: none;
+  height: 100px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #a6754c;
+  margin: 10px 5px;
+}
+
+#kontak form button {
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  background-color: #a6754c;
+  border: none;
+  color: #fcf9e8;
+  box-shadow: 0px 0px 2px black;
+}
+
+/* style aside */
+aside {
+  box-shadow: 0px 0px 5px rgba(153, 102, 51, 0.3);
+  margin-top: 20px;
+}
+
+aside header {
+  height: 25%;
+  width: 25%;
+  box-shadow: 0px 0px 5px rgba(153, 102, 51, 0.3);
+  margin: 20px auto;
+  background-color: #faeda9;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5%;
+}
+
+aside header img {
+  width: 75%;
+}
+
+aside header figure {
+  text-align: center;
+}
+
+aside section p {
+  padding: 20px;
+  margin: 10px;
+  line-height: 30px;
+}
+
+aside .profile {
+  height: 300px;
+  width: 200px;
+  background-color: #faeda9;
+  margin: 20px auto;
+  border-radius: 5%;
+  box-shadow: 0px 0px 5px rgba(153, 102, 51, 0.3);
+}
+
+aside .profile img {
+  width: 100%;
+  margin-top: -20px;
+}
+
+aside .profile figcaption {
+  text-align: center;
+}
+
+/* style footer */
+footer {
+  display: flex;
+  background-color: #313131;
+  color: #fcf9e8;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+}
+
+footer .info {
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+}
+
+footer .info ul,
+a {
+  list-style: none;
+  text-decoration: none;
+  line-height: 30px;
+  color: #fcf9e8;
+}
+
+footer .info a:hover {
+  color: #e2e2e2;
+}
+
+footer p {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #1a1919;
+}
+
+footer .info img {
+  width: 70%;
+}
+
+/*Responsive Breakpoint*/
+/*Ukuran Tablet*/
+@media screen and (max-width: 1000px) {
+  nav ul {
+    width: 60%;
+  }
+
+  /* style main */
+  main {
+    width: 90%;
+    margin: auto;
+  }
+
+  /* style beranda */
+  #beranda {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+  }
+
+  .isi button {
+    display: flex;
+    padding: 10px;
+    font-size: 100%;
+    border: none;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50px;
+    color: #a6754c;
+    background-color: #faeda9;
+    box-shadow: 0px 0px 4px #a6754c;
+    margin-top: 25px;
+  }
+
+  .play::before {
+    font-size: 30px;
+  }
+
+  /* style produk */
+  #produk section ul {
+    width: 30%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  /* style fitur */
+  #fitur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #fitur section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  #fitur h2 {
+    width: 50%;
+    text-align: center;
+  }
+
+  #fitur table {
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  /* style kontak */
+  #kontak section table {
+    width: 30%;
+    height: 200px;
+  }
+
+  #kontak section form {
+    width: 50%;
+  }
+
+  /* style aside */
+  aside header {
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
+/*Ukuran Mobile*/
+@media screen and (max-width: 650px) {
+  nav ul {
+    position: absolute;
+    top: 0;
+    margin-top: 75px;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #edce7c;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0px)
+  }
+
+  nav ul li.link a:hover::after {
+    margin-bottom: -3px;
+  }
+
+  nav {
+    z-index: 5;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* style jumbotron */
+  div.jumbotron {
+    display: none;
+  }
+
+  /* style main */
+  main {
+    width: 99%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  /* style beranda */
+  #beranda {
+    top: 75px;
+    /* position: relative; */
+    border-radius: 0px 0px 5px 5px;
+    z-index: 3;
+    font-size: 15px;
+    overflow: hidden;
+  }
+
+  .isi button {
+    width: 100%;
+    margin-top: 35%;
+    margin-left: -50%;
+  }
+
+  /* style produk */
+  #produk section {
+    display: inline;
+  }
+
+  #produk section ul {
+    width: 75%;
+    margin: 10px auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* style fitur */
+  #fitur h2 {
+    width: 50%;
+    text-align: center;
+  }
+
+  #fitur table {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+  }
+
+  /* style kontak */
+  #kontak section table {
+    width: 100%;
+    height: 200px;
+  }
+
+  #kontak section form {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  #kontak {
+    height: auto;
+  }
+
+  #kontak section {
+    flex-wrap: wrap;
+  }
+
+  /* style aside */
+  aside .profile {
+    height: 220px;
+    width: 150px;
+    background-color: #faeda9;
+    margin: 20px auto;
+    border-radius: 5%;
+    box-shadow: 0px 0px 5px rgba(153, 102, 51, 0.3);
+  }
+
+  aside .profile img {
+    width: 100%;
+    margin-top: -30px;
+  }
+
+  footer .info {
+    width: 100%;
+  }
+
+  footer .info img {
+    width: 70%;
+  }
+}
